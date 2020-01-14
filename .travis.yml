@@ -16,7 +16,7 @@ after_success:
    - docker build -t jmroldanh/multi-worker ./worker
 
 # Log in to Docker Hub
-   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --pasword-stdin
+   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
 
 # Push images to Docker Hub
    - docker push jmroldanh/multi-client
